@@ -118,3 +118,17 @@ footer a:hover {
   margin: 5px 0;
   color: #fff; /* Change color as per your design */
 }
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
+}
