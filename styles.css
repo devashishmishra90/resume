@@ -7,7 +7,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(to right, #024950, #0adaed);
   color: #fff;
 }
 
@@ -121,7 +121,7 @@ footer a:hover {
 .download-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #2a4158;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -131,4 +131,24 @@ footer a:hover {
 
 .download-button:hover {
   background-color: #0056b3;
+}
+.project-details {
+  display: none; /* Initially hidden */
+  margin-top: 10px;
+}
+
+/* Optional: Style for clickable project headings */
+.project-heading {
+  cursor: pointer;
+  color: #91a9c3;
+  text-decoration: underline;
+}
+
+/* Arrow indicator for project heading */
+.project-heading::after {
+  content: " ";
+}
+
+.project-heading.expanded::after {
+  content: " ";
 }
