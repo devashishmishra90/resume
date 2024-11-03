@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Devashish Mishra - Projects</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Style for the collapsible project details */
+      .project-details {
+        display: none; /* Initially hidden */
+        margin-top: 10px;
+      }
+
+      /* Optional: Style for clickable project headings */
+      .project-heading {
+        cursor: pointer;
+        color: #007bff;
+        text-decoration: underline;
+      }
+
+      /* Arrow indicator for project heading */
+      .project-heading::after {
+        content: " ▼";
+      }
+
+      .project-heading.expanded::after {
+        content: " ▲";
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -13,133 +36,155 @@
     </header>
     <section class="projects">
       <div class="project">
-        <h2>PC-Based Load Banks Control and Monitoring Application</h2>
-        <p>
-          <strong>Description:</strong> Development of an application which
-          controls & monitors Load banks on communication interfaces like
-          USB-RS485, CAN Bus & Modbus TCP/IP. A load bank simulates electrical
-          loads for power source testing without normal connections.
-        </p>
-        <p>
-          <strong>Technology:</strong> C++, Dart, Flutter, Multithreading,
-          RS485, Modbus TCP/IP, CAN communication
-        </p>
-        <p><strong>Responsibility:</strong></p>
-        <ul>
-          <li>Leading the backend team for application development.</li>
-          <li>High & Low level designing of messaging protocol.</li>
-          <li>
-            Development of messaging protocol using Dart Programming Language
-            which improved system performance by 35%.
-          </li>
-          <li>
-            Managed a team for Modbus based communication tasks with Load Banks.
-          </li>
-          <li>
-            Designed Class & Sequence Diagram for PCAN based communication with
-            Load Banks.
-          </li>
-          <li>
-            Planning with UI team to define common APIs to interact between
-            frontend & Backend.
-          </li>
-          <li>
-            Integrated multithreading concepts to maximize performance and
-            handle concurrent communication tasks effectively.
-          </li>
-        </ul>
+        <h2 class="project-heading" onclick="toggleDetails(this)">
+          PC-Based Load Banks Control and Monitoring Application
+        </h2>
+        <div class="project-details">
+          <p>
+            <strong>Description:</strong> Development of an application which
+            controls & monitors Load banks on communication interfaces like
+            USB-RS485, CAN Bus & Modbus TCP/IP. A load bank simulates electrical
+            loads for power source testing without normal connections.
+          </p>
+          <p>
+            <strong>Technology:</strong> C++, Dart, Flutter, Multithreading,
+            RS485, Modbus TCP/IP, CAN communication
+          </p>
+          <p><strong>Responsibility:</strong></p>
+          <ul>
+            <li>Leading the backend team for application development.</li>
+            <li>High & Low level designing of messaging protocol.</li>
+            <li>
+              Development of messaging protocol using Dart Programming Language
+              which improved system performance by 35%.
+            </li>
+            <li>
+              Managed a team for Modbus based communication tasks with Load
+              Banks.
+            </li>
+            <li>
+              Designed Class & Sequence Diagram for PCAN based communication
+              with Load Banks.
+            </li>
+            <li>
+              Planning with UI team to define common APIs to interact between
+              frontend & Backend.
+            </li>
+            <li>
+              Integrated multithreading concepts to maximize performance and
+              handle concurrent communication tasks effectively.
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div class="project">
-        <h2>SOME/IP Protocol Library for In-Vehicle Communication</h2>
-        <p>
-          <strong>Description:</strong> Developed a robust and efficient C++
-          library to implement the SOME/IP (Scalable Service-Oriented Middleware
-          over IP) protocol for communication in autonomous systems.
-        </p>
-        <p>
-          <strong>Technology:</strong> Modern C++, Linux, Multithreading, Boost
-          Library, Raspberry Pi, UDP/TCP
-        </p>
-        <p><strong>Responsibility:</strong></p>
-        <ul>
-          <li>System Designing of Library stack.</li>
-          <li>
-            Researched and thoroughly understood the SOME/IP protocol
-            specification.
-          </li>
-          <li>Implemented packet creation and parsing modules.</li>
-          <li>Developed the service discovery protocol.</li>
-          <li>Utilized Boost libraries for network communication.</li>
-          <li>Integrated multithreading concepts to maximize performance.</li>
-        </ul>
+        <h2 class="project-heading" onclick="toggleDetails(this)">
+          SOME/IP Protocol Library for In-Vehicle Communication
+        </h2>
+        <div class="project-details">
+          <p>
+            <strong>Description:</strong> Developed a robust and efficient C++
+            library to implement the SOME/IP (Scalable Service-Oriented
+            Middleware over IP) protocol for communication in autonomous
+            systems.
+          </p>
+          <p>
+            <strong>Technology:</strong> Modern C++, Linux, Multithreading,
+            Boost Library, Raspberry Pi, UDP/TCP
+          </p>
+          <p><strong>Responsibility:</strong></p>
+          <ul>
+            <li>System Designing of Library stack.</li>
+            <li>
+              Researched and thoroughly understood the SOME/IP protocol
+              specification.
+            </li>
+            <li>Implemented packet creation and parsing modules.</li>
+            <li>Developed the service discovery protocol.</li>
+            <li>Utilized Boost libraries for network communication.</li>
+            <li>Integrated multithreading concepts to maximize performance.</li>
+          </ul>
+        </div>
       </div>
 
       <div class="project">
-        <h2>Cloud-Enabled IoT Gateway Solution</h2>
-        <p>
-          <strong>Description:</strong> Development of a complete and bootable
-          Linux environment for an Intel processor-based IoT Gateway box.
-        </p>
-        <p><strong>Technology:</strong> C, C++, Linux, Build root, Wt, STL</p>
-        <p><strong>Responsibility:</strong></p>
-        <ul>
-          <li>Implemented robust error handling mechanisms.</li>
-          <li>Developed features into the Web UI using the Wt library.</li>
-          <li>Led debugging efforts for secure file uploads.</li>
-        </ul>
+        <h2 class="project-heading" onclick="toggleDetails(this)">
+          Cloud-Enabled IoT Gateway Solution
+        </h2>
+        <div class="project-details">
+          <p>
+            <strong>Description:</strong> Development of a complete and bootable
+            Linux environment for an Intel processor-based IoT Gateway box.
+          </p>
+          <p><strong>Technology:</strong> C, C++, Linux, Build root, Wt, STL</p>
+          <p><strong>Responsibility:</strong></p>
+          <ul>
+            <li>Implemented robust error handling mechanisms.</li>
+            <li>Developed features into the Web UI using the Wt library.</li>
+            <li>Led debugging efforts for secure file uploads.</li>
+          </ul>
+        </div>
       </div>
 
       <div class="project">
-        <h2>
+        <h2 class="project-heading" onclick="toggleDetails(this)">
           Scale Device Integration with Uni Data Link (UDL) for Healthcare
           Company
         </h2>
-        <p>
-          <strong>Description:</strong> Development of drivers for new scale
-          devices to facilitate communication with the UDL.
-        </p>
-        <p><strong>Technology:</strong> C++, Linux, U-Boot, RAM disk</p>
-        <p><strong>Responsibility:</strong></p>
-        <ul>
-          <li>Collaborated closely with the UDL development team.</li>
-          <li>Updated RAM disk image with new software updates.</li>
-        </ul>
+        <div class="project-details">
+          <p>
+            <strong>Description:</strong> Development of drivers for new scale
+            devices to facilitate communication with the UDL.
+          </p>
+          <p><strong>Technology:</strong> C++, Linux, U-Boot, RAM disk</p>
+          <p><strong>Responsibility:</strong></p>
+          <ul>
+            <li>Collaborated closely with the UDL development team.</li>
+            <li>Updated RAM disk image with new software updates.</li>
+          </ul>
+        </div>
       </div>
 
       <div class="project">
-        <h2>
+        <h2 class="project-heading" onclick="toggleDetails(this)">
           Optical Repeater Integration for Improved Telecommunication Coverage
         </h2>
-        <p>
-          <strong>Description:</strong> Development of optical repeaters
-          utilizing RF over Fiber technology.
-        </p>
-        <p>
-          <strong>Technology:</strong> C, MSP430 microcontroller, Code Composer
-          Studio, OrCAD design
-        </p>
-        <p><strong>Responsibility:</strong></p>
-        <ul>
-          <li>Developed algorithms for signal power calculations.</li>
-          <li>Implemented code for ROU's configuration management.</li>
-          <li>Established communication between ROU and Master Device.</li>
-        </ul>
+        <div class="project-details">
+          <p>
+            <strong>Description:</strong> Development of optical repeaters
+            utilizing RF over Fiber technology.
+          </p>
+          <p>
+            <strong>Technology:</strong> C, MSP430 microcontroller, Code
+            Composer Studio, OrCAD design
+          </p>
+          <p><strong>Responsibility:</strong></p>
+          <ul>
+            <li>Developed algorithms for signal power calculations.</li>
+            <li>Implemented code for ROU's configuration management.</li>
+            <li>Established communication between ROU and Master Device.</li>
+          </ul>
+        </div>
       </div>
 
       <div class="project">
-        <h2>Haemoglobin Measuring Device</h2>
-        <p>
-          <strong>Description:</strong> Porting of hardware and firmware for an
-          existing haemoglobin meter.
-        </p>
-        <p><strong>Technology:</strong> C, STM32, STM32CubeIDE, Glass LCD</p>
-        <p><strong>Responsibility:</strong></p>
-        <ul>
-          <li>Designed and implemented a software LCD library.</li>
-          <li>Developed the HAL Layer for the LCD subsystem.</li>
-          <li>Led debugging efforts related to various peripherals.</li>
-        </ul>
+        <h2 class="project-heading" onclick="toggleDetails(this)">
+          Haemoglobin Measuring Device
+        </h2>
+        <div class="project-details">
+          <p>
+            <strong>Description:</strong> Porting of hardware and firmware for
+            an existing haemoglobin meter.
+          </p>
+          <p><strong>Technology:</strong> C, STM32, STM32CubeIDE, Glass LCD</p>
+          <p><strong>Responsibility:</strong></p>
+          <ul>
+            <li>Designed and implemented a software LCD library.</li>
+            <li>Developed the HAL Layer for the LCD subsystem.</li>
+            <li>Led debugging efforts related to various peripherals.</li>
+          </ul>
+        </div>
       </div>
     </section>
     <footer>
@@ -157,5 +202,15 @@
         >
       </p>
     </footer>
+
+    <script>
+      // JavaScript function to toggle project details
+      function toggleDetails(element) {
+        const details = element.nextElementSibling;
+        details.style.display =
+          details.style.display === "none" ? "block" : "none";
+        element.classList.toggle("expanded");
+      }
+    </script>
   </body>
 </html>
