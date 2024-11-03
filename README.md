@@ -1,1 +1,1 @@
-# resume.io
+# resume
