@@ -41,7 +41,7 @@
   if (navbar) {
     var navLinks = PROFILE.nav
       .map(function(n) {
-        return '<li><a href="' + n.href + '">' + n.label + '</a></li>';
+        var style = n.size ? ' style="font-size:' + n.size + '"' : ''; return '<li><a href="' + n.href + '"' + style + '>' + n.label + '</a></li>';
       }).join('');
     navbar.innerHTML =
       '<a href="index.html" class="nav-logo">' + PROFILE.name + '</a>' +
