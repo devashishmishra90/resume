@@ -40,10 +40,10 @@ const THEME = {
 
 const PROFILE = {
   name: "Devashish Mishra",
-  title: "Associate Staff Engineer",
+  title: "Staff Engineer",
   company: "Nagarro",
   location: "Delhi, IN",
-  bio: "7 years crafting systems software — from bare-metal embedded firmware to automotive SOME/IP stacks, IoT gateways, and industrial communication protocols.",
+  bio: "8 years crafting systems software — from bare-metal embedded firmware to automotive SOME/IP stacks, IoT gateways, and industrial communication protocols.",
   aboutHeading: "Software Engineer.<br>Systems Thinker.",
   about: "Proficient in C and C++ with deep roots in embedded systems, communication protocols, and firmware development. I architect and implement solutions for power systems, automotive ECUs, medical devices, and telecommunications — bringing both technical depth and team leadership to every project.",
   email: "devashishmishra90@gmail.com",
@@ -71,6 +71,12 @@ const EXPERIENCE = [
     company: "Nagarro Software Pvt Ltd",
     period: "July 2020 — Present",
     roles: [
+      {
+        title: "Staff Engineer",
+        bullets: [
+          "Leading ADAS Development",
+        ],
+      },
       {
         title: "Associate Staff Engineer",
         bullets: [
