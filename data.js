@@ -57,9 +57,9 @@ const PROFILE = {
     { label: "education",  href: "education.html" },
   ],
   stats: [
-    { number: "7+", label: "Years Experience" },
-    { number: "6",  label: "Major Projects" },
-    { number: "4",  label: "Industries" },
+    { number: "8+", label: "Years Experience" },
+    { number: "7+",  label: "Major Projects" },
+    { number: "5+",  label: "Industries" },
     { number: "C++", label: "Primary Stack" },
   ],
 };
