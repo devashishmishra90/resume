@@ -1,74 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Work Experience - Devashish Mishra</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Work Experience</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work Experience — Devashish Mishra</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-    <section>
-      <h2>Nagarro Software Pvt Ltd (July 2020 - Present)</h2>
-      <h3>Associate Staff Engineer</h3>
-      <ul>
-        <li>
-          Leading the backend team for development of PC based application to
-          communicate with connected Load Bank
-        </li>
-        <li>
-          Led the development of automotive communication protocol SOME/IP stack
-          in C++ for seamless data exchange within vehicles ECU following MISRA
-          C++ Standard
-        </li>
-      </ul>
-      <h3>Senior Engineer</h3>
-      <ul>
-        <li>Developed Linux based IoT gateway application software in C++</li>
-        <li>
-          Implemented a custom ram disk image to optimize the boot-up process.
-        </li>
-        <li>
-          Designed and developed firmware for healthcare devices, resulting in
-          increased device reliability and performance
-        </li>
-      </ul>
-      <h3>Engineer</h3>
-      <ul>
-        <li>
-          Implemented low-level drivers for various peripherals, ensuring
-          efficient and reliable operation
-        </li>
-        <li>
-          Leveraged FreeRTOS for multi-threading, parallel processing, and
-          effective hardware utilization
-        </li>
-      </ul>
+  <nav class="navbar" id="navbar"></nav>
 
-      <h2>Frog Cellsat Ltd (Sept 2019 - Mar 2020)</h2>
-      <h3>Software Engineer</h3>
-      <ul>
-        <li>
-          Designed and developed firmware for RF power controlling devices,
-          ensuring precise and efficient control of RF power output
-        </li>
-      </ul>
+  <section class="section" style="padding-top: 100px;">
+    <div class="section-header">
+      <span class="section-tag">// work_experience</span>
+      <h1 class="section-title">Where I've Worked</h1>
+    </div>
+    <div class="experience-list" id="experience-list"></div>
+  </section>
 
-      <h2>ASES Pvt Ltd (Sept 2017 - Aug 2019)</h2>
-      <h3>Software Engineer</h3>
-      <ul>
-        <li>
-          Developed intuitive GUI applications using Python for fire detecting
-          devices
-        </li>
-      </ul>
-    </section>
+  <footer class="site-footer" id="footer"></footer>
 
-    <footer>
-      <a href="index.html">Back to Home</a>
-    </footer>
-  </body>
+  <script src="render.js"></script>
+  <script>
+    document.addEventListener('dataReady', function () {
+      document.getElementById('experience-list').innerHTML = EXPERIENCE.map(function(company, ci) {
+        var rolesHTML = company.roles.map(function(role) {
+          return '<div class="exp-role">' +
+            '<div class="exp-role-title">' + role.title + '</div>' +
+            '<ul class="exp-bullets">' +
+            role.bullets.map(function(b) { return '<li>' + b + '</li>'; }).join('') +
+            '</ul></div>';
+        }).join('');
+        return '<div class="exp-company" ' + (ci > 0 ? 'style="margin-top:16px;"' : '') + '>' +
+          '<div class="exp-company-header">' +
+            '<div class="exp-company-name">' + company.company + '</div>' +
+            '<div class="exp-company-period">' + company.period + '</div>' +
+          '</div>' +
+          '<div class="exp-roles">' + rolesHTML + '</div>' +
+          '</div>';
+      }).join('');
+    });
+  </script>
+</body>
 </html>

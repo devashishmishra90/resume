@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Education - Devashish Mishra</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Education</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education — Devashish Mishra</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-    <section>
-      <h2>Bachelor of Technology (2013-2017)</h2>
-      <p>Electronics & Communication Engineering</p>
-      <p>Noida Institute of Engineering & Technology, Greater Noida</p>
+  <nav class="navbar" id="navbar"></nav>
 
-      <h2>XII Senior Secondary (2011-2012)</h2>
-      <p>Science & Mathematics, CBSE, Delhi</p>
-    </section>
+  <section class="section" style="padding-top: 100px;">
+    <div class="section-header">
+      <span class="section-tag">// education</span>
+      <h1 class="section-title">Academic Background</h1>
+    </div>
+    <div class="edu-grid" id="edu-grid"></div>
+  </section>
 
-    <footer>
-      <a href="index.html">Back to Home</a>
-    </footer>
-  </body>
+  <footer class="site-footer" id="footer"></footer>
+
+  <script src="render.js"></script>
+  <script>
+    document.addEventListener('dataReady', function () {
+      document.getElementById('edu-grid').innerHTML = EDUCATION.map(function(e) {
+        return '<div class="edu-card">' +
+          '<div class="edu-icon">' + e.icon + '</div>' +
+          '<div>' +
+            '<div class="edu-degree">' + e.degree + '</div>' +
+            '<div class="edu-field">' + e.field + '</div>' +
+            '<div class="edu-institution">' + e.institution + '</div>' +
+            '<span class="edu-year">' + e.year + '</span>' +
+          '</div></div>';
+      }).join('');
+    });
+  </script>
+</body>
 </html>
