@@ -51,10 +51,10 @@ const PROFILE = {
   linkedin: "https://www.linkedin.com/in/devashishmishra/",
   resume: "resume.pdf",
   nav: [
-    { label: "experience", href: "work_experience.html" },
-    { label: "skills",     href: "skills.html" },
-    { label: "projects",   href: "projects.html" },
-    { label: "education",  href: "education.html" },
+  { label: "experience", href: "work_experience.html", size: "0.75rem" },
+  { label: "skills",     href: "skills.html",          size: "0.75rem" },
+  { label: "projects",   href: "projects.html",        size: "0.75rem" },
+  { label: "education",  href: "education.html",       size: "0.75rem" },
   ],
   stats: [
     { number: "8+", label: "Years Experience" },
