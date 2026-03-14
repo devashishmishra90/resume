@@ -20,26 +20,25 @@
 
   <footer class="site-footer" id="footer"></footer>
 
+  <script src="data.js"></script>
   <script src="render.js"></script>
   <script>
-    document.addEventListener('dataReady', function () {
-      document.getElementById('experience-list').innerHTML = EXPERIENCE.map(function(company, ci) {
-        var rolesHTML = company.roles.map(function(role) {
-          return '<div class="exp-role">' +
-            '<div class="exp-role-title">' + role.title + '</div>' +
-            '<ul class="exp-bullets">' +
-            role.bullets.map(function(b) { return '<li>' + b + '</li>'; }).join('') +
-            '</ul></div>';
-        }).join('');
-        return '<div class="exp-company" ' + (ci > 0 ? 'style="margin-top:16px;"' : '') + '>' +
-          '<div class="exp-company-header">' +
-            '<div class="exp-company-name">' + company.company + '</div>' +
-            '<div class="exp-company-period">' + company.period + '</div>' +
-          '</div>' +
-          '<div class="exp-roles">' + rolesHTML + '</div>' +
-          '</div>';
+    document.getElementById('experience-list').innerHTML = EXPERIENCE.map(function(company, ci) {
+      var rolesHTML = company.roles.map(function(role) {
+        return '<div class="exp-role">' +
+          '<div class="exp-role-title">' + role.title + '</div>' +
+          '<ul class="exp-bullets">' +
+          role.bullets.map(function(b) { return '<li>' + b + '</li>'; }).join('') +
+          '</ul></div>';
       }).join('');
-    });
+      return '<div class="exp-company" ' + (ci > 0 ? 'style="margin-top:16px;"' : '') + '>' +
+        '<div class="exp-company-header">' +
+          '<div class="exp-company-name">' + company.company + '</div>' +
+          '<div class="exp-company-period">' + company.period + '</div>' +
+        '</div>' +
+        '<div class="exp-roles">' + rolesHTML + '</div>' +
+        '</div>';
+    }).join('');
   </script>
 </body>
 </html>

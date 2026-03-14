@@ -20,20 +20,19 @@
 
   <footer class="site-footer" id="footer"></footer>
 
+  <script src="data.js"></script>
   <script src="render.js"></script>
   <script>
-    document.addEventListener('dataReady', function () {
-      document.getElementById('edu-grid').innerHTML = EDUCATION.map(function(e) {
-        return '<div class="edu-card">' +
-          '<div class="edu-icon">' + e.icon + '</div>' +
-          '<div>' +
-            '<div class="edu-degree">' + e.degree + '</div>' +
-            '<div class="edu-field">' + e.field + '</div>' +
-            '<div class="edu-institution">' + e.institution + '</div>' +
-            '<span class="edu-year">' + e.year + '</span>' +
-          '</div></div>';
-      }).join('');
-    });
+    document.getElementById('edu-grid').innerHTML = EDUCATION.map(function(e) {
+      return '<div class="edu-card">' +
+        '<div class="edu-icon">' + e.icon + '</div>' +
+        '<div>' +
+          '<div class="edu-degree">' + e.degree + '</div>' +
+          '<div class="edu-field">' + e.field + '</div>' +
+          '<div class="edu-institution">' + e.institution + '</div>' +
+          '<span class="edu-year">' + e.year + '</span>' +
+        '</div></div>';
+    }).join('');
   </script>
 </body>
 </html>

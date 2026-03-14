@@ -34,32 +34,27 @@
 
   <footer class="site-footer" id="footer"></footer>
 
+  <script src="data.js"></script>
   <script src="render.js"></script>
   <script>
-    document.addEventListener('dataReady', function () {
-      var nameParts = PROFILE.name.split(' ');
-      document.getElementById('hero-name').innerHTML =
-        nameParts[0] + ' <span class="name-highlight">' + nameParts.slice(1).join(' ') + '</span>';
-
-      document.getElementById('hero-role').innerHTML =
-        PROFILE.title + ' <span class="divider">/</span> ' + PROFILE.company +
-        ' <span class="divider">/</span> ' + PROFILE.location;
-
-      document.getElementById('hero-bio').textContent = PROFILE.bio;
-      document.getElementById('about-heading').innerHTML = PROFILE.aboutHeading;
-      document.getElementById('about-text').textContent = PROFILE.about;
-
-      document.getElementById('hero-actions').innerHTML =
-        '<a href="' + PROFILE.resume + '" download class="btn-primary">↓ Download Resume</a>' +
-        '<a href="mailto:' + PROFILE.email + '" class="btn-secondary">Send Email</a>' +
-        '<a href="' + PROFILE.linkedin + '" target="_blank" class="btn-secondary">LinkedIn ↗</a>';
-
-      document.getElementById('stats-bar').innerHTML = PROFILE.stats
-        .map(function(s) {
-          return '<div class="stat-item"><span class="stat-number">' + s.number +
-            '</span><span class="stat-label">' + s.label + '</span></div>';
-        }).join('');
-    });
+    var nameParts = PROFILE.name.split(' ');
+    document.getElementById('hero-name').innerHTML =
+      nameParts[0] + ' <span class="name-highlight">' + nameParts.slice(1).join(' ') + '</span>';
+    document.getElementById('hero-role').innerHTML =
+      PROFILE.title + ' <span class="divider">/</span> ' + PROFILE.company +
+      ' <span class="divider">/</span> ' + PROFILE.location;
+    document.getElementById('hero-bio').textContent = PROFILE.bio;
+    document.getElementById('about-heading').innerHTML = PROFILE.aboutHeading;
+    document.getElementById('about-text').textContent = PROFILE.about;
+    document.getElementById('hero-actions').innerHTML =
+      '<a href="' + PROFILE.resume + '" download class="btn-primary">↓ Download Resume</a>' +
+      '<a href="mailto:' + PROFILE.email + '" class="btn-secondary">Send Email</a>' +
+      '<a href="' + PROFILE.linkedin + '" target="_blank" class="btn-secondary">LinkedIn ↗</a>';
+    document.getElementById('stats-bar').innerHTML = PROFILE.stats
+      .map(function(s) {
+        return '<div class="stat-item"><span class="stat-number">' + s.number +
+          '</span><span class="stat-label">' + s.label + '</span></div>';
+      }).join('');
   </script>
 </body>
 </html>

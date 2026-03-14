@@ -20,18 +20,17 @@
 
   <footer class="site-footer" id="footer"></footer>
 
+  <script src="data.js"></script>
   <script src="render.js"></script>
   <script>
-    document.addEventListener('dataReady', function () {
-      document.getElementById('skills-grid').innerHTML = SKILLS.map(function(cat) {
-        return '<div class="skill-card">' +
-          '<div class="skill-card-icon" style="background:' + cat.color + '">' + cat.icon + '</div>' +
-          '<div class="skill-card-title">' + cat.title + '</div>' +
-          '<div class="skill-tags">' +
-          cat.tags.map(function(t) { return '<span class="skill-tag">' + t + '</span>'; }).join('') +
-          '</div></div>';
-      }).join('');
-    });
+    document.getElementById('skills-grid').innerHTML = SKILLS.map(function(cat) {
+      return '<div class="skill-card">' +
+        '<div class="skill-card-icon" style="background:' + cat.color + '">' + cat.icon + '</div>' +
+        '<div class="skill-card-title">' + cat.title + '</div>' +
+        '<div class="skill-tags">' +
+        cat.tags.map(function(t) { return '<span class="skill-tag">' + t + '</span>'; }).join('') +
+        '</div></div>';
+    }).join('');
   </script>
 </body>
 </html>
