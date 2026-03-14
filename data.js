@@ -52,9 +52,9 @@ const PROFILE = {
   resume: "resume.pdf",
   nav: [
   { label: "experience", href: "work_experience.html", size: "0.95rem" },
-  { label: "skills",     href: "skills.html",          size: "0.75rem" },
-  { label: "projects",   href: "projects.html",        size: "0.75rem" },
-  { label: "education",  href: "education.html",       size: "0.75rem" },
+  { label: "skills",     href: "skills.html",          size: "0.95rem" },
+  { label: "projects",   href: "projects.html",        size: "0.95rem" },
+  { label: "education",  href: "education.html",       size: "0.95rem" },
   ],
   stats: [
     { number: "8+", label: "Years Experience" },
