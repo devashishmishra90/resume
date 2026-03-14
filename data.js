@@ -11,8 +11,8 @@
 const THEME = {
 
   // ── Fonts ──────────────────────────────────────────────────
-  fontHeading: "Syne",           // Used for big headings & name
-  fontBody:    "Syne",           // Used for paragraphs & general text
+  fontHeading: "Arial",           // Used for big headings & name
+  fontBody:    "Arial",           // Used for paragraphs & general text
   fontMono:    "JetBrains Mono", // Used for labels, tags, nav, code
 
   // ── Background Colors ──────────────────────────────────────
