@@ -16,8 +16,8 @@ const THEME = {
   fontMono:    "JetBrains Mono", // Used for labels, tags, nav, code
 
   // ── Background Colors ──────────────────────────────────────
-  bgPrimary:   "#3382d0",   // Main page background
-  bgSecondary: "#788dad",   // Navbar, footer, stats bar
+  bgPrimary:   "#080c10",   // Main page background
+  bgSecondary: "#0d1117",   // Navbar, footer, stats bar
   bgCard:      "#111820",   // Cards (projects, skills, experience)
   bgCardHover: "#161e28",   // Cards on hover
 
