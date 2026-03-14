@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Devashish Mishra - Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Devashish Mishra</h1>
-      <p>Associate Staff Engineer at Nagarro</p>
-      <!-- Download Resume Button -->
-      <a href="resume.pdf" download class="download-button">Download Resume</a>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="work_experience.html">Work Experience</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="projects.html">Projects</a></li>
-      </ul>
-    </nav>
-    <section class="about">
-      <h2>About Me</h2>
-      <p>
-        A Software Engineer with 7 years of experience in leading teams and
-        managing the full software development life cycle, delivering solutions
-        in power systems, automotive, medical, and telecommunications.
-      </p>
-    </section>
-    <footer>
-      <p>
-        Contact:
-        <a href="mailto:devashishmishra90@gmail.com"
-          >devashishmishra90@gmail.com</a
-        >
-        | Phone: +91-7838163544
-      </p>
-      <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/devashishmishra/" target="_blank"
-          >Profile</a
-        >
-      </p>
-    </footer>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devashish Mishra — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar"></nav>
+
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-glow"></div>
+    <div class="hero-content">
+      <div class="hero-label fade-in-up delay-1">Available for opportunities</div>
+      <h1 class="fade-in-up delay-2" id="hero-name"></h1>
+      <div class="hero-role fade-in-up delay-3" id="hero-role"></div>
+      <p class="hero-bio fade-in-up delay-3" id="hero-bio"></p>
+      <div class="hero-actions fade-in-up delay-4" id="hero-actions"></div>
+    </div>
+  </section>
+
+  <div class="stats-bar" id="stats-bar"></div>
+
+  <section class="section">
+    <div class="section-header">
+      <span class="section-tag">// about</span>
+      <h2 class="section-title" id="about-heading"></h2>
+    </div>
+    <p id="about-text" style="font-size:1.05rem; color:var(--text-secondary); max-width:680px; line-height:1.9;"></p>
+  </section>
+
+  <footer class="site-footer" id="footer"></footer>
+
+  <script src="render.js"></script>
+  <script>
+    document.addEventListener('dataReady', function () {
+      var nameParts = PROFILE.name.split(' ');
+      document.getElementById('hero-name').innerHTML =
+        nameParts[0] + ' <span class="name-highlight">' + nameParts.slice(1).join(' ') + '</span>';
+
+      document.getElementById('hero-role').innerHTML =
+        PROFILE.title + ' <span class="divider">/</span> ' + PROFILE.company +
+        ' <span class="divider">/</span> ' + PROFILE.location;
+
+      document.getElementById('hero-bio').textContent = PROFILE.bio;
+      document.getElementById('about-heading').innerHTML = PROFILE.aboutHeading;
+      document.getElementById('about-text').textContent = PROFILE.about;
+
+      document.getElementById('hero-actions').innerHTML =
+        '<a href="' + PROFILE.resume + '" download class="btn-primary">↓ Download Resume</a>' +
+        '<a href="mailto:' + PROFILE.email + '" class="btn-secondary">Send Email</a>' +
+        '<a href="' + PROFILE.linkedin + '" target="_blank" class="btn-secondary">LinkedIn ↗</a>';
+
+      document.getElementById('stats-bar').innerHTML = PROFILE.stats
+        .map(function(s) {
+          return '<div class="stat-item"><span class="stat-number">' + s.number +
+            '</span><span class="stat-label">' + s.label + '</span></div>';
+        }).join('');
+    });
+  </script>
+</body>
 </html>
