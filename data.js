@@ -5,6 +5,39 @@
 //  New job? Add an object to EXPERIENCE.
 // ============================================================
 
+// ── THEME ────────────────────────────────────────────────────
+// Control every visual aspect of your portfolio here.
+// Google Fonts: https://fonts.google.com — pick any font name.
+const THEME = {
+
+  // ── Fonts ──────────────────────────────────────────────────
+  fontHeading: "Arial",           // Used for big headings & name
+  fontBody:    "Arial",           // Used for paragraphs & general text
+  fontMono:    "JetBrains Mono", // Used for labels, tags, nav, code
+
+  // ── Background Colors ──────────────────────────────────────
+  bgPrimary:   "#080c10",   // Main page background
+  bgSecondary: "#0d1117",   // Navbar, footer, stats bar
+  bgCard:      "#111820",   // Cards (projects, skills, experience)
+  bgCardHover: "#161e28",   // Cards on hover
+
+  // ── Text Colors ────────────────────────────────────────────
+  textPrimary:   "#e8f4f8", // Headings, main text
+  textSecondary: "#8baab8", // Body paragraphs, descriptions
+  textMuted:     "#4a6070", // Subtle labels, dividers
+
+  // ── Accent Colors ──────────────────────────────────────────
+  accentPrimary:   "#00e5ff", // Cyan  — navbar, tags, highlights
+  accentSecondary: "#39ff14", // Green — bullet icons, gradients
+  accentAmber:     "#ffb300", // Amber — dates, year badges
+
+  // ── Border Colors ──────────────────────────────────────────
+  borderSubtle: "rgba(0, 229, 255, 0.12)", // Default card borders
+  borderGlow:   "rgba(0, 229, 255, 0.4)",  // Card borders on hover
+
+};
+
+
 const PROFILE = {
   name: "Devashish Mishra",
   title: "Staff Engineer",
@@ -18,15 +51,15 @@ const PROFILE = {
   linkedin: "https://www.linkedin.com/in/devashishmishra/",
   resume: "resume.pdf",
   nav: [
-    { label: "experience", href: "work_experience.html" },
-    { label: "skills",     href: "skills.html" },
-    { label: "projects",   href: "projects.html" },
-    { label: "education",  href: "education.html" },
+  { label: "experience", href: "work_experience.html", size: "0.95rem" },
+  { label: "skills",     href: "skills.html",          size: "0.95rem" },
+  { label: "projects",   href: "projects.html",        size: "0.95rem" },
+  { label: "education",  href: "education.html",       size: "0.95rem" },
   ],
   stats: [
-    { number: "7+", label: "Years Experience" },
-    { number: "6",  label: "Major Projects" },
-    { number: "4",  label: "Industries" },
+    { number: "8+", label: "Years Experience" },
+    { number: "7+",  label: "Major Projects" },
+    { number: "5+",  label: "Industries" },
     { number: "C++", label: "Primary Stack" },
   ],
 };
